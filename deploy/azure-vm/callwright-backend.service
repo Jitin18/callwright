@@ -1,0 +1,14 @@
+[Unit]
+Description=Callwright voice agent - backend
+After=network-online.target 
+
+[Service]
+User=__APP_USER__
+WorkingDirectory=__APP_DIR__
+EnvironmentFile=__APP_DIR__/.env
+ExecStart=__APP_DIR__/.venv/bin/uvicorn services.mock_backend.app:app --host 127.0.0.1 --port 8100
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

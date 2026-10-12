@@ -1,0 +1,14 @@
+[Unit]
+Description=Callwright voice agent - runtime
+After=network-online.target callwright-gateway.service
+
+[Service]
+User=__APP_USER__
+WorkingDirectory=__APP_DIR__
+EnvironmentFile=__APP_DIR__/.env
+ExecStart=__APP_DIR__/.venv/bin/uvicorn services.agent_runtime.app:app --host 127.0.0.1 --port 8000
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

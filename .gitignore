@@ -1,0 +1,32 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+*.tsbuildinfo
+
+# Runtime data (RAG vector store is rebuilt on startup)
+data/
+
+# Call recordings, logs and generated reports: regenerate with scripts/
+recordings/
+logs/
+docs/*.pdf
+docs/TEST_REPORT.md
+docs/screenshots/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.zip

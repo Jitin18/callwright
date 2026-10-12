@@ -1,0 +1,16 @@
+fastapi>=0.115
+uvicorn[standard]>=0.30
+httpx>=0.27
+pydantic>=2.8
+fastmcp>=4.0,<5
+websockets>=14
+azure-identity>=1.19      # Azure AI Content Safety (optional guardrail) only
+numpy>=1.26
+silero-vad>=6.0           # local voice activity detection (turn taking, barge-in)
+python-dotenv>=1.0
+# RAG Knowledge Base (local vector store). On Windows/Linux without a GPU, install torch from the CPU index first:
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+# Windows also needs the Microsoft Visual C++ Redistributable (x64).
+chromadb>=1.0
+sentence-transformers>=3.0
+pytest>=8
